@@ -1,0 +1,84 @@
+From mizzle.lang Require Import
+  prelude.
+From mizzle.lang Require Import
+  instances.
+From tests Require Import
+  variant_1__types.
+From mizzle.lang Require Import
+  options.
+
+Definition variant_1٠test1 : val :=
+  vfun: <> =>
+    §A ;;
+    ‘B( 0 ) ;;
+    ‘C( 0, 0 ) ;;
+    ().
+
+Definition variant_1٠test2 : val :=
+  vfun: "t" =>
+    match: "t" with
+    | A =>
+        0
+    | B "i" =>
+        "i"
+    | C "i1" "i2" =>
+        "i1" + "i2"
+    end.
+
+Definition variant_1٠test3 : val :=
+  vfun: "t" =>
+    match: "t" with
+    | A =>
+        ()
+    | B <> =>
+        ()
+    | C <> <> =>
+        ()
+    end.
+
+Definition variant_1٠test4 : val :=
+  vfun: "t" =>
+    match: "t" with
+    | A =>
+        §A
+    | B <> as "t" =>
+        "t"
+    | C <> <> as "t" =>
+        "t"
+    end.
+
+Definition variant_1٠test5 : val :=
+  vfun: "t" =>
+    match: "t" with
+    | A =>
+        ()
+    |_ =>
+        ()
+    end.
+
+Definition variant_1٠test6 : val :=
+  vfun: "t" =>
+    match: "t" with
+    |_ as "t" =>
+        "t"
+    end.
+
+Definition variant_1٠test7 : val :=
+  vfun: "t" =>
+    match: "t" with
+    |_ as "t" =>
+        let: "t'" := "t" in
+        "t" ;;
+        "t'"
+    end.
+
+Definition variant_1٠test8 : val :=
+  vfun: "t" =>
+    match: "t" with
+    | A =>
+        ()
+    | B <> =>
+        ()
+    | C <> <> =>
+        ()
+    end.

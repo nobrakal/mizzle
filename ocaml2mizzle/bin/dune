@@ -1,0 +1,13 @@
+(executable
+  (name ocaml2mizzle)
+  (public_name ocaml2mizzle)
+  (libraries
+    dune
+    mizzlelang
+    unix
+    cmdliner
+  )
+  (promote
+    (until-clean)
+  )
+)

@@ -1,0 +1,16 @@
+(lang dune 3.0)
+
+(name linearizable)
+
+(generate_opam_files true)
+
+(license MIT)
+
+(package
+ (name linearizable)
+ (allow_empty)
+ (synopsis "Lock-free data structures (OCaml source for ocaml2mizzle translation)")
+ (depends
+  (ocaml
+   (= 5.4.1))
+  dune))

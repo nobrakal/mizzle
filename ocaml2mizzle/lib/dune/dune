@@ -1,0 +1,9 @@
+(library
+  (name dune)
+  (libraries
+    ocaml2mizzle.base
+    unix
+    csexp
+  )
+  (flags (:standard -open Ocaml2mizzle__base))
+)

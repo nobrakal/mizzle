@@ -1,0 +1,47 @@
+From mizzle.lang Require Import
+  prelude.
+From mizzle.lang Require Import
+  instances.
+From mizzle.stdlib Require Import
+  atomic_loc.
+From tests Require Import
+  atomic__types.
+From mizzle.lang Require Import
+  options.
+
+Definition atomic٠test0 : val :=
+  vfun: "a" =>
+    !ᵃᵗ"a" ;;
+    "a" <-ᵃᵗ 0.
+
+Definition atomic٠test1 : val :=
+  vfun: <> =>
+    let: "a" := ref 0 in
+    atomic_loc٠xchg "a" ⟨contents⟩ 0 ;;
+    atomic_loc٠cas "a" ⟨contents⟩ 0 0 ;;
+    atomic_loc٠faa "a" ⟨contents⟩ 0 ;;
+    atomic_loc٠faa "a" ⟨contents⟩ (-1) ;;
+    atomic_loc٠faa "a" ⟨contents⟩ 1 ;;
+    ().
+
+Definition atomic٠test2 : val :=
+  vfun: "loc" =>
+    GetField Atomic "loc".<0> "loc".<1> ;;
+    SetField Atomic "loc".<0> "loc".<1> 0 ;;
+    Xchg "loc" 0 ;;
+    CAS "loc" 0 0 ;;
+    FAA "loc" 0 ;;
+    FAA "loc" (-1) ;;
+    FAA "loc" 1 ;;
+    ().
+
+Definition atomic٠test3 : val :=
+  vfun: "t" =>
+    GetField Atomic ("t".[f]).<0> ("t".[f]).<1> ;;
+    SetField Atomic ("t".[f]).<0> ("t".[f]).<1> 0 ;;
+    atomic_loc٠xchg "t" ⟨f⟩ 0 ;;
+    atomic_loc٠cas "t" ⟨f⟩ 0 0 ;;
+    atomic_loc٠faa "t" ⟨f⟩ 0 ;;
+    atomic_loc٠faa "t" ⟨f⟩ (-1) ;;
+    atomic_loc٠faa "t" ⟨f⟩ 1 ;;
+    ().

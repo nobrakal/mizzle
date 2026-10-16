@@ -1,0 +1,21 @@
+From mizzle.lang Require Import
+  prelude.
+From mizzle.lang Require Import
+  instances.
+From tests Require Import
+  obj__types.
+From mizzle.lang Require Import
+  options.
+
+Definition obj٠test : val :=
+  vfun: <> =>
+    let: "x" := () in
+    "x" ;;
+    "x" ;;
+    IsImmediate "x" ;;
+    GetTag "x" ;;
+    GetSize "x" ;;
+    GetField NotAtomic "x" 0 ;;
+    SetField NotAtomic "x" 0 "x" ;;
+    Alloc 0 0 ;;
+    ().

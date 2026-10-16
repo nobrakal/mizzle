@@ -1,0 +1,8 @@
+(library
+  (name mizzlelang)
+  (libraries
+    ocaml-compiler-libs.common
+    ocaml2mizzle.base
+  )
+  (flags (:standard -open Ocaml2mizzle__base))
+)

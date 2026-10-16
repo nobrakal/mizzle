@@ -1,0 +1,62 @@
+From mizzle.lang Require Import
+  prelude.
+From mizzle.lang Require Import
+  instances.
+From tests Require Import
+  mutual__types.
+From mizzle.lang Require Import
+  options.
+
+#[local] Definition __mizzle_recs_0 :=
+  ( recs: "test3" "x" =>
+      "x"
+    and: "test4" "x" =>
+      "x"
+  )%mizzle_recs.
+Definition mutual٠test3 :=
+  ValRecs 0 __mizzle_recs_0.
+Definition mutual٠test4 :=
+  ValRecs 1 __mizzle_recs_0.
+#[global] Instance :
+  AsValRecs' mutual٠test3 0 __mizzle_recs_0 [
+    mutual٠test3 ;
+    mutual٠test4
+  ].
+Proof.
+  done.
+Qed.
+#[global] Instance :
+  AsValRecs' mutual٠test4 1 __mizzle_recs_0 [
+    mutual٠test3 ;
+    mutual٠test4
+  ].
+Proof.
+  done.
+Qed.
+
+#[local] Definition __mizzle_recs_1 :=
+  ( recs: "test5" "x" =>
+      "test6" "x"
+    and: "test6" "x" =>
+      "test5" "x"
+  )%mizzle_recs.
+Definition mutual٠test5 :=
+  ValRecs 0 __mizzle_recs_1.
+Definition mutual٠test6 :=
+  ValRecs 1 __mizzle_recs_1.
+#[global] Instance :
+  AsValRecs' mutual٠test5 0 __mizzle_recs_1 [
+    mutual٠test5 ;
+    mutual٠test6
+  ].
+Proof.
+  done.
+Qed.
+#[global] Instance :
+  AsValRecs' mutual٠test6 1 __mizzle_recs_1 [
+    mutual٠test5 ;
+    mutual٠test6
+  ].
+Proof.
+  done.
+Qed.

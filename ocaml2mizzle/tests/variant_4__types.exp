@@ -1,0 +1,24 @@
+From mizzle.lang Require Import
+  prelude.
+From mizzle.lang Require Import
+  instances.
+From mizzle.lang Require Import
+  options.
+
+Notation "'A'" := (
+  in_type "tests.variant_4.t" 0
+)(in custom mizzle_tag
+).
+Notation "'B'" := (
+  in_type "tests.variant_4.t" 1
+)(in custom mizzle_tag
+).
+
+Notation "'f1'" := (
+  in_type "tests.variant_4.t.B" 0
+)(in custom mizzle_field
+).
+Notation "'f2'" := (
+  in_type "tests.variant_4.t.B" 1
+)(in custom mizzle_field
+).

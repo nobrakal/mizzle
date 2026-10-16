@@ -1,0 +1,27 @@
+From mizzle.lang Require Import
+  prelude.
+From mizzle.lang Require Import
+  instances.
+From tests Require Import
+  labeled_arguments__types.
+From mizzle.lang Require Import
+  options.
+
+Definition labeled_arguments٠test1 : val :=
+  vfun: "x1" "x2" "x3" "x4" =>
+    "x1" ;;
+    "x2" ;;
+    "x3" ;;
+    "x4" ;;
+    ().
+
+Definition labeled_arguments٠test2 : val :=
+  vfun: "x1" <> "x3" "x4" =>
+    "x1" ;;
+    "x3" ;;
+    "x4" ;;
+    ().
+
+Definition labeled_arguments٠test3 : val :=
+  vfun: <> =>
+    labeled_arguments٠test1 1 2 3 4.

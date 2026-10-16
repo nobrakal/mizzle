@@ -1,0 +1,26 @@
+From mizzle.lang Require Import
+  prelude.
+From mizzle.lang Require Import
+  instances.
+From tests Require Import
+  list__types.
+From mizzle.lang Require Import
+  options.
+
+Definition list٠test1 : val :=
+  vfun: <> =>
+    [] ;;
+    0 :: [] ;;
+    1 :: [] ;;
+    ().
+
+Definition list٠test2 : val :=
+  vfun: "xs" =>
+    match: "xs" with
+    | [] =>
+        ()
+    | "x" :: "xs" =>
+        "x" ;;
+        "xs" ;;
+        ()
+    end.

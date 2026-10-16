@@ -1,0 +1,24 @@
+From mizzle.lang Require Import
+  prelude.
+From mizzle.lang Require Import
+  instances.
+From tests Require Import
+  variant_2__types.
+From mizzle.lang Require Import
+  options.
+
+Definition variant_2٠test1 : val :=
+  vfun: <> =>
+    §Leaf ;;
+    ‘Node( §Leaf, 0, §Leaf ) ;;
+    ‘Node( ‘Node( §Leaf, 0, §Leaf ), 1, §Leaf ) ;;
+    ().
+
+Definition variant_2٠test2 : val :=
+  vrec: "test2" "t" =>
+    match: "t" with
+    | Leaf =>
+        0
+    | Node "t1" "x" "t2" =>
+        "test2" "t1" + "x" + "test2" "t2"
+    end.

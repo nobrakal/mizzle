@@ -1,0 +1,27 @@
+From mizzle.lang Require Import
+  prelude.
+From mizzle.lang Require Import
+  instances.
+From tests Require Import
+  record_2__types.
+From mizzle.lang Require Import
+  options.
+
+Definition record_2٠test1 : val :=
+  vfun: <> =>
+    let: "t2" := (0, 1) in
+    "t2".<f1>.
+
+Definition record_2٠test2 : val :=
+  vfun: "t" =>
+    let: "f1", "f2" := "t" in
+    "f1" + "f2".
+
+Definition record_2٠test3 : val :=
+  vfun: "t" =>
+    (0, "t".<f2>).
+
+Definition record_2٠test4 : val :=
+  vfun: <> =>
+    let: "@tmp" := (0, 0) in
+    (0, "@tmp".<f2>).

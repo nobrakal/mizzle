@@ -1,0 +1,16 @@
+From mizzle.lang Require Import
+  prelude.
+From mizzle.lang Require Import
+  instances.
+From tests Require Import
+  mizzle_opaque__types.
+From mizzle.lang Require Import
+  options.
+
+Parameter mizzle_opaque٠test1 : val.
+
+Parameter mizzle_opaque٠test2 : val.
+
+Parameter mizzle_opaque٠test3 : val.
+
+Parameter mizzle_opaque٠test4 : val.

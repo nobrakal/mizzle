@@ -1,0 +1,22 @@
+From mizzle.lang Require Import
+  prelude.
+From mizzle.lang Require Import
+  instances.
+From tests Require Import
+  ignore__types.
+From mizzle.lang Require Import
+  options.
+
+Definition ignore٠test1 : val :=
+  vfun: <> =>
+    () ;;
+    ().
+
+Definition ignore٠test2 : val :=
+  vfun: "x" =>
+    "x" ;;
+    ().
+
+Definition ignore٠test3 : val :=
+  vfun: <> =>
+    fun: <> => ().

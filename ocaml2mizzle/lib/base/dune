@@ -1,0 +1,7 @@
+(library
+  (name ocaml2mizzle__base)
+  (public_name ocaml2mizzle.base)
+  (libraries
+    fmt
+  )
+)

@@ -1,0 +1,16 @@
+From mizzle.lang Require Import
+  prelude.
+From mizzle.lang Require Import
+  instances.
+From tests Require Import
+  let_open__types.
+From mizzle.lang Require Import
+  options.
+
+Definition let_open٠test1 : val :=
+  vfun: <> =>
+    GetField NotAtomic (Alloc 0 1) 0.
+
+Definition let_open٠test2 : val :=
+  vfun: <> =>
+    GetField NotAtomic (Alloc 0 1) 0.

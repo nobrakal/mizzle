@@ -1,0 +1,15 @@
+From mizzle.lang Require Import
+  prelude.
+From mizzle.lang Require Import
+  instances.
+From tests Require Import
+  literal__types.
+From mizzle.lang Require Import
+  options.
+
+Definition literal٠test : val :=
+  vfun: <> =>
+    0 ;;
+    true ;;
+    false ;;
+    ().

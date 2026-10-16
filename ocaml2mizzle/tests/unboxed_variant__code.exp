@@ -1,0 +1,26 @@
+From mizzle.lang Require Import
+  prelude.
+From mizzle.lang Require Import
+  instances.
+From tests Require Import
+  unboxed_variant__types.
+From mizzle.lang Require Import
+  options.
+
+Definition unboxed_variant٠test1 : val :=
+  vfun: "x" =>
+    "x".
+
+Definition unboxed_variant٠test2 : val :=
+  vfun: "t" =>
+    match: "t" with
+    |_ as "x" =>
+        "x"
+    end.
+
+Definition unboxed_variant٠test3 : val :=
+  vfun: "t" =>
+    match: "t" with
+    |_ as "x" =>
+        "x"
+    end.

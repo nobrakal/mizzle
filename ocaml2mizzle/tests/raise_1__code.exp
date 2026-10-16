@@ -1,0 +1,22 @@
+From mizzle.lang Require Import
+  prelude.
+From mizzle.lang Require Import
+  instances.
+From mizzle.stdlib Require Import
+  diverge.
+From tests Require Import
+  raise_1__types.
+From mizzle.lang Require Import
+  options.
+
+Definition raise_1٠test1 : val :=
+  vfun: <> =>
+    diverge ().
+
+Definition raise_1٠test2 : val :=
+  vfun: <> =>
+    diverge ().
+
+Definition raise_1٠test3 : val :=
+  vfun: <> =>
+    diverge ().

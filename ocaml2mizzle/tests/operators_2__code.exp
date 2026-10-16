@@ -1,0 +1,16 @@
+From mizzle.lang Require Import
+  prelude.
+From mizzle.lang Require Import
+  instances.
+From mizzle.stdlib Require Import
+  structural_equality.
+From tests Require Import
+  operators_2__types.
+From mizzle.lang Require Import
+  options.
+
+Definition operators_2٠test : val :=
+  vfun: "x" "y" =>
+    "x" = "y" ;;
+    "x" ≠ "y" ;;
+    ().

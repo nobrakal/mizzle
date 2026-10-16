@@ -1,0 +1,29 @@
+(lang dune 3.0)
+
+(name ocaml2mizzle)
+
+(generate_opam_files)
+
+; Upstream ocaml2zoo is by Clément Allain (https://github.com/clef-men/ocaml2zoo);
+; this vendored copy is maintained as part of Mizzle. See VENDORED.md.
+(authors
+  "Clément Allain"
+  "Alexandre Moine"
+)
+(maintainers
+  "Alexandre Moine <alexandre.moine@inria.fr>"
+)
+
+(source (github nobrakal/mizzle))
+(license ISC)
+
+(package
+  (name ocaml2mizzle)
+  (synopsis "OCaml to MizzleLang")
+  (depends
+    ocaml-compiler-libs
+    csexp
+    fmt
+    cmdliner
+  )
+)

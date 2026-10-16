@@ -1,0 +1,38 @@
+From mizzle.lang Require Import
+  prelude.
+From mizzle.lang Require Import
+  instances.
+From tests Require Import
+  if__types.
+From mizzle.lang Require Import
+  options.
+
+Definition if٠test1 : val :=
+  vfun: "b" =>
+    if: "b" then (
+      0
+    ) else (
+      1
+    ).
+
+Definition if٠test2 : val :=
+  vfun: "b0" "b1" =>
+    if: "b0" then (
+      0
+    ) else if: "b1" then (
+      1
+    ) else (
+      2
+    ).
+
+Definition if٠test3 : val :=
+  vfun: "b0" "b1" "b2" =>
+    if: "b0" then (
+      0
+    ) else if: "b1" then (
+      1
+    ) else if: "b2" then (
+      2
+    ) else (
+      3
+    ).

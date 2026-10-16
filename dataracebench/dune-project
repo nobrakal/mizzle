@@ -1,0 +1,17 @@
+(lang dune 3.0)
+
+(name dataracebench)
+
+(generate_opam_files true)
+
+(license MIT)
+
+(package
+ (name dataracebench)
+ (allow_empty)
+ (synopsis "An OCaml 5 adaptation of the DataRaceBench benchmark suite")
+ (depends
+  (ocaml
+   (= 5.4.1))
+  dune
+  domainslib))

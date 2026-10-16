@@ -1,0 +1,29 @@
+From mizzle.lang Require Import
+  prelude.
+From mizzle.lang Require Import
+  instances.
+From mizzle.lang Require Import
+  options.
+
+Notation "'f1'" := (
+  in_type "tests.mizzle_force_record.t1" 0
+)(in custom mizzle_field
+).
+Notation "'f2'" := (
+  in_type "tests.mizzle_force_record.t1" 1
+)(in custom mizzle_field
+).
+
+Notation "'A'" := (
+  in_type "tests.mizzle_force_record.t2" 0
+)(in custom mizzle_tag
+).
+Notation "'B'" := (
+  in_type "tests.mizzle_force_record.t2" 1
+)(in custom mizzle_tag
+).
+
+Notation "'f'" := (
+  in_type "tests.mizzle_force_record.t2.B" 0
+)(in custom mizzle_field
+).
